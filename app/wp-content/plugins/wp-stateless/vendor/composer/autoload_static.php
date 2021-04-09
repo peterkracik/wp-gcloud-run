@@ -4,9 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20
+class ComposerStaticInitc59d002476a452800baaf79c430753cb
 {
+    public static $files = array (
+        '8ca8a91f0a826d6c6c8f274c90ca7d88' => __DIR__ . '/..' . '/wpmetabox/meta-box/meta-box.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -14,6 +22,10 @@ class ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20
     );
 
     public static $prefixDirsPsr4 = array (
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
@@ -71,21 +83,37 @@ class ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20
         'wpCloud\\StatelessMedia\\EWWW' => __DIR__ . '/../..' . '/lib/classes/compatibility/ewww.php',
         'wpCloud\\StatelessMedia\\Elementor' => __DIR__ . '/../..' . '/lib/classes/compatibility/elementor.php',
         'wpCloud\\StatelessMedia\\Errors' => __DIR__ . '/../..' . '/lib/classes/class-errors.php',
+        'wpCloud\\StatelessMedia\\FatalException' => __DIR__ . '/../..' . '/lib/classes/exception-fatal.php',
         'wpCloud\\StatelessMedia\\GS_Client' => __DIR__ . '/../..' . '/lib/classes/class-gs-client.php',
+        'wpCloud\\StatelessMedia\\GoogleAppEngine' => __DIR__ . '/../..' . '/lib/classes/compatibility/google-app-engine.php',
         'wpCloud\\StatelessMedia\\GravityForm' => __DIR__ . '/../..' . '/lib/classes/compatibility/gravity-forms.php',
+        'wpCloud\\StatelessMedia\\GravityFormSignature' => __DIR__ . '/../..' . '/lib/classes/compatibility/gravity-forms-signature.php',
         'wpCloud\\StatelessMedia\\ICompatibility' => __DIR__ . '/../..' . '/lib/classes/compatibility/ICompatibility.php',
         'wpCloud\\StatelessMedia\\Imagify' => __DIR__ . '/../..' . '/lib/classes/compatibility/imagify.php',
         'wpCloud\\StatelessMedia\\LSCacheWP' => __DIR__ . '/../..' . '/lib/classes/compatibility/lite-speed-cache.php',
         'wpCloud\\StatelessMedia\\LearnDash' => __DIR__ . '/../..' . '/lib/classes/compatibility/learn-dash.php',
         'wpCloud\\StatelessMedia\\Logger' => __DIR__ . '/../..' . '/lib/classes/class-logger.php',
         'wpCloud\\StatelessMedia\\Module' => __DIR__ . '/../..' . '/lib/classes/class-compatibility.php',
+        'wpCloud\\StatelessMedia\\Polylang' => __DIR__ . '/../..' . '/lib/classes/compatibility/polylang-pro.php',
         'wpCloud\\StatelessMedia\\SOCSS' => __DIR__ . '/../..' . '/lib/classes/compatibility/siteorigin-css.php',
         'wpCloud\\StatelessMedia\\SOWidgetCSS' => __DIR__ . '/../..' . '/lib/classes/compatibility/siteorigin-widget-bundle.php',
         'wpCloud\\StatelessMedia\\Settings' => __DIR__ . '/../..' . '/lib/classes/class-settings.php',
         'wpCloud\\StatelessMedia\\ShortPixel' => __DIR__ . '/../..' . '/lib/classes/compatibility/shortpixel.php',
+        'wpCloud\\StatelessMedia\\SimpleLocalAvatars' => __DIR__ . '/../..' . '/lib/classes/compatibility/simple-local-avatars.php',
+        'wpCloud\\StatelessMedia\\Singleton' => __DIR__ . '/../..' . '/lib/classes/trait-singleton.php',
+        'wpCloud\\StatelessMedia\\StreamWrapper' => __DIR__ . '/../..' . '/lib/classes/class-gs-stream-wrapper.php',
         'wpCloud\\StatelessMedia\\SyncNonMedia' => __DIR__ . '/../..' . '/lib/classes/class-sync-non-media.php',
+        'wpCloud\\StatelessMedia\\Sync\\BackgroundSync' => __DIR__ . '/../..' . '/lib/classes/sync/class-background-sync.php',
+        'wpCloud\\StatelessMedia\\Sync\\FileSync' => __DIR__ . '/../..' . '/lib/classes/sync/class-file-sync.php',
+        'wpCloud\\StatelessMedia\\Sync\\HelperWindow' => __DIR__ . '/../..' . '/lib/classes/sync/class-helper-window.php',
+        'wpCloud\\StatelessMedia\\Sync\\ISync' => __DIR__ . '/../..' . '/lib/classes/sync/interface-sync.php',
+        'wpCloud\\StatelessMedia\\Sync\\ImageSync' => __DIR__ . '/../..' . '/lib/classes/sync/class-image-sync.php',
+        'wpCloud\\StatelessMedia\\Sync\\LibrarySync' => __DIR__ . '/../..' . '/lib/classes/sync/class-library-sync.php',
+        'wpCloud\\StatelessMedia\\Sync\\NonLibrarySync' => __DIR__ . '/../..' . '/lib/classes/sync/class-non-library-sync.php',
+        'wpCloud\\StatelessMedia\\UnprocessableException' => __DIR__ . '/../..' . '/lib/classes/exception-unprocessable.php',
         'wpCloud\\StatelessMedia\\Upgrader' => __DIR__ . '/../..' . '/lib/classes/class-upgrader.php',
         'wpCloud\\StatelessMedia\\Utility' => __DIR__ . '/../..' . '/lib/classes/class-utility.php',
+        'wpCloud\\StatelessMedia\\VidoRev' => __DIR__ . '/../..' . '/lib/classes/compatibility/vidorev.php',
         'wpCloud\\StatelessMedia\\WPBakeryPageBuilder' => __DIR__ . '/../..' . '/lib/classes/compatibility/wpbakery-page-builder.php',
         'wpCloud\\StatelessMedia\\WPForms' => __DIR__ . '/../..' . '/lib/classes/compatibility/wpforms.php',
         'wpCloud\\StatelessMedia\\WPRetina2x' => __DIR__ . '/../..' . '/lib/classes/compatibility/wp-retina-2x.php',
@@ -95,10 +123,10 @@ class ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc00cd3c666f8dfa818cb7edfd488ed20::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc59d002476a452800baaf79c430753cb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc59d002476a452800baaf79c430753cb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc59d002476a452800baaf79c430753cb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc59d002476a452800baaf79c430753cb::$classMap;
 
         }, null, ClassLoader::class);
     }

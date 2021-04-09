@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: WP-Stateless
- * Plugin URI: https://www.usabilitydynamics.com
+ * Plugin URI: https://udx.io
  * Description: Upload and serve your WordPress media files from Google Cloud Storage.
- * Author: Usability Dynamics, Inc.
- * Version: 2.3.2
+ * Author: UDX
+ * Version: 3.1.1
  * Text Domain: stateless-media
- * Author URI: https://www.usabilitydynamics.com
+ * Author URI: https://www.udx.io
  *
- * Copyright 2012 - 2019 Usability Dynamics, Inc.  ( email: info@usabilitydynamics.com )
+ * Copyright 2012 - 2020 UDX ( email: info@udx.io )
  *
  */
 
@@ -65,6 +65,9 @@ if( !function_exists( 'ud_check_stateless_media' ) ) {
       if( !class_exists( '\wpCloud\StatelessMedia\Bootstrap' ) ) {
         throw new Exception( __( 'Distributive is broken. Plugin loader is not available. Try to remove and upload plugin again.', 'stateless-media' ) );
       }
+
+      // Include metabox tabs addon
+      require_once(  dirname( __FILE__ ) . '/lib/meta-box-tabs/meta-box-tabs.php' );
     } catch( Exception $e ) {
       $_ud_stateless_media_error = $e->getMessage();
       return false;
