@@ -1,4 +1,4 @@
-FROM php:8.0.3-apache-buster
+FROM php:8.0.6-apache-buster
 
 RUN apt-get update && apt-get upgrade -yy \
     && apt-get install --no-install-recommends apt-utils libjpeg-dev libpng-dev libwebp-dev \
@@ -13,4 +13,4 @@ RUN docker-php-ext-configure zip --with-zip \
     && a2enmod rewrite
 
 WORKDIR /var/www/html
-COPY ./app /var/www/html/
+COPY ./app /var/www/html/ 
