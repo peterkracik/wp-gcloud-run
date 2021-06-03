@@ -16,10 +16,9 @@
  */
 namespace wpCloud\StatelessMedia\Google_Client;
 
-
 class Google_Service_Storage_Bucket extends Google_Collection
 {
-  protected $collection_key = 'defaultObjectAcl';
+  protected $collection_key = 'zoneAffinity';
   protected $aclType = 'Google_Service_Storage_BucketAccessControl';
   protected $aclDataType = 'array';
   protected $billingType = 'Google_Service_Storage_BucketBilling';
@@ -32,12 +31,15 @@ class Google_Service_Storage_Bucket extends Google_Collection
   protected $encryptionType = 'Google_Service_Storage_BucketEncryption';
   protected $encryptionDataType = '';
   public $etag;
+  protected $iamConfigurationType = 'Google_Service_Storage_BucketIamConfiguration';
+  protected $iamConfigurationDataType = '';
   public $id;
   public $kind;
   public $labels;
   protected $lifecycleType = 'Google_Service_Storage_BucketLifecycle';
   protected $lifecycleDataType = '';
   public $location;
+  public $locationType;
   protected $loggingType = 'Google_Service_Storage_BucketLogging';
   protected $loggingDataType = '';
   public $metageneration;
@@ -55,6 +57,8 @@ class Google_Service_Storage_Bucket extends Google_Collection
   protected $versioningDataType = '';
   protected $websiteType = 'Google_Service_Storage_BucketWebsite';
   protected $websiteDataType = '';
+  public $zoneAffinity;
+  public $zoneSeparation;
 
   /**
    * @param Google_Service_Storage_BucketAccessControl
@@ -142,6 +146,20 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->etag;
   }
+  /**
+   * @param Google_Service_Storage_BucketIamConfiguration
+   */
+  public function setIamConfiguration(Google_Service_Storage_BucketIamConfiguration $iamConfiguration)
+  {
+    $this->iamConfiguration = $iamConfiguration;
+  }
+  /**
+   * @return Google_Service_Storage_BucketIamConfiguration
+   */
+  public function getIamConfiguration()
+  {
+    return $this->iamConfiguration;
+  }
   public function setId($id)
   {
     $this->id = $id;
@@ -187,6 +205,14 @@ class Google_Service_Storage_Bucket extends Google_Collection
   public function getLocation()
   {
     return $this->location;
+  }
+  public function setLocationType($locationType)
+  {
+    $this->locationType = $locationType;
+  }
+  public function getLocationType()
+  {
+    return $this->locationType;
   }
   /**
    * @param Google_Service_Storage_BucketLogging
@@ -313,5 +339,21 @@ class Google_Service_Storage_Bucket extends Google_Collection
   public function getWebsite()
   {
     return $this->website;
+  }
+  public function setZoneAffinity($zoneAffinity)
+  {
+    $this->zoneAffinity = $zoneAffinity;
+  }
+  public function getZoneAffinity()
+  {
+    return $this->zoneAffinity;
+  }
+  public function setZoneSeparation($zoneSeparation)
+  {
+    $this->zoneSeparation = $zoneSeparation;
+  }
+  public function getZoneSeparation()
+  {
+    return $this->zoneSeparation;
   }
 }
