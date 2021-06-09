@@ -5,6 +5,7 @@ RUN apt-get update && apt-get upgrade -yy \
     libzip-dev zlib1g-dev libfreetype6-dev supervisor zip \
     unzip software-properties-common -yy \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && chown -Rf www-data.www-data /var/www/html/
 
 RUN docker-php-ext-install zip \
     && docker-php-ext-install mysqli pdo pdo_mysql \
