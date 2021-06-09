@@ -13,10 +13,8 @@ RUN docker-php-ext-install zip \
     && docker-php-ext-install -j "$(nproc)" gd \
     && a2enmod rewrite
     
-RUN chown -R www-data:www-data /var/www/html/
-RUN find /var/www/html/ -type d -exec chmod 750 {} \;
-RUN find /var/www/html/ -type f -exec chmod 640 {} \;
-
+RUN chown -R www-data.www-data /var/www/html
+RUN chmod  755  /var/www/html
 
 WORKDIR /var/www/html
 COPY ./app /var/www/html/ 
