@@ -1,7 +1,7 @@
 FROM php:8.0-apache
 
 RUN apt-get update && apt-get upgrade -yy \
-    && apt-get install --no-install-recommends apt-utils libjpeg-dev libpng-dev libwebp-dev \
+    && apt-get install sudo && apt-get install --no-install-recommends apt-utils libjpeg-dev libpng-dev libwebp-dev \
     libzip-dev zlib1g-dev libfreetype6-dev supervisor zip \
     unzip software-properties-common -yy \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
