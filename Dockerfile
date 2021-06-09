@@ -5,7 +5,9 @@ RUN apt-get update && apt-get upgrade -yy \
     libzip-dev zlib1g-dev libfreetype6-dev supervisor zip \
     unzip software-properties-common -yy \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-    && chown -Rf www-data.www-data /var/www/html/
+    && chown -R www-data.www-data /var/www/html/
+    && find /var/www/clinic.nuvenscare.com/ -type d -exec chmod 750 {} \;
+    && find /var/www/clinic.nuvenscare.com/ -type f -exec chmod 640 {} \;
 
 RUN docker-php-ext-install zip \
     && docker-php-ext-install mysqli pdo pdo_mysql \
